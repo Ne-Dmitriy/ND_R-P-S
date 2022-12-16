@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,500");
+
+:root {
+  --header-col: #7D83F7; 
+
+  --body-col: #24272e;
+
+  --main-win: #11c62d;
+  --dark-win: #0e6714;
+  --shad-win: #084822; 
+
+  --main-lose: #c42929;
+  --dark-lose: #530505;
+  --shad-lose: #2e0303;
+
+  --main-draw: rgb(36, 35, 38);
+  --dark-draw: rgb(43, 43, 47); 
+  --shad-draw: rgb(43, 43, 47);
+ 
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--body-col);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+a {
+  font-family: "Source Code Pro", monospace;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+} 
+
+header {
+  background: var(--header-col);
+  padding: 20px;
+} 
+
+header h1 {
+  color: var(--body-col);
+  text-align: center;
+  font-weight: 300;
+} 
+
+.score-board {
+  border: 3px solid #fff;
+  width: 300px;
+  margin: 40px auto;
+  font-size: 40px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.badge { 
+  background: var(--header-col);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 6px;
+}
+
+#user-label {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translate(-10%, -50%);
+}
+
+#computer-label {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translate(10%, -50%);
+}
+
+.result {
+  font-weight: 300;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.result {
+  line-height: 50px;
+}
+.choices {
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.choice {
+  display: inline-block;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin: auto 10px;
+  transition: all 0.3s ease;
+}
+
+.choice img {
+  filter: invert(100%);
+}
+
+#action-message {
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 40px 0;
+}
+
+.winningStyles {
+  border: 3px solid var(--main-win);
+  background-color: var(--dark-win);
+  box-shadow: 0 0 20px var(--shad-win);
+}
+
+.losingStyles {
+  border: 3px solid var(--main-lose);
+  background-color: var(--dark-lose);
+  box-shadow: 0 0 20px var(--shad-lose); 
+}
+
+.drawStyles {
+  border: 3px solid var(--main-draw);
+  background-color: var(--dark-draw);
+  box-shadow: 0 0 20px var(--shad-draw); 
+}
+
+sup {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  text-align: center;
+  padding: 1rem; 
+}
+
+footer a {
+  text-decoration: none; 
+}
+
+@media (max-width: 920px) { 
+
+  code {
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+  }
+  
+  header {
+    background: var(--header-col);
+    padding: 20px;
+  } 
+  
+  header h1 {
+    color: var(--body-col);
+    text-align: center;
+    font-weight: 300;
+  } 
+   
+  .score-board {
+    border: 3px solid #fff;
+    width: 300px;
+    margin: 40px auto;
+    font-size: 45px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;  
+  }
+  
+  .badge {
+    background: var(--header-col);
+    text-transform: uppercase;
+    font-size: 29px;
+    padding: 10px 6px;
+  }
+  
+  #user-label {
+    position: absolute;
+    top: 50%; 
+    left: -5%;
+    transform: translate(-10%, -50%);
+  }
+  
+  #computer-label {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translate(10%, -50%);
+  }
+  
+  .result {
+    font-weight: 300;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .result {
+    line-height: 30px;
+  }
+
+  .choices {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .choice {
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin: auto 10px;
+    transition: all 0.3s ease;
+  } 
+  
+  #action-message {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 40px 0;
+  } 
+  
+  .winningStyles {
+    border: 3px solid var(--main-win);
+    background-color: var(--dark-win);
+    box-shadow: 0 0 20px var(--shad-win);
+  }
+  
+  .losingStyles {
+    border: 3px solid var(--main-lose);
+    background-color: var(--dark-lose);
+    box-shadow: 0 0 20px var(--shad-lose); 
+  }
+  
+  .drawStyles {
+    border: 3px solid var(--main-draw);
+    background-color: var(--dark-draw);
+    box-shadow: 0 0 20px var(--shad-draw); 
+  }
+  
+  sup {
+    margin: 0;
+    padding: 0;
+  }
+}
